@@ -31,7 +31,7 @@ document.querySelectorAll('input[name], #formula').forEach(function (input) {
 				throw "returned value isn't logical";
 			}
 		} catch (error) {
-			result.style.backgroundColor = "#fff";
+			result.style.backgroundColor = "#ffffff";
 			console.error(error);
 		}
 	});
