@@ -22,7 +22,7 @@ document.querySelectorAll('input[name], #formula, #condition').forEach(function 
 				throw "returned value isn't logical";
 			}
 		} catch (error) {
-			result.style.backgroundColor = "#ffffff";
+			result.style.backgroundColor = "#fff";
 			console.error(error);
 		}
 
