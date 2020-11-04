@@ -6,18 +6,19 @@ document.querySelector('#user-form').addEventListener('submit', function (e) {
  let email = document.querySelector('[name="email"]');
  let password = document.querySelector('[name="password"]');
  let description = document.querySelector('[name="description"]');
+ let fragment = document.querySelector('[name="description"]');
 
  let validFulName = /^[а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]+\s+[а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]+\s+[а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]+$/;
- let validEmail = /^(\w.?)+[^.]\@\w+\.\w+\s*$/;
+ let validEmail = /^(\w\.?)+[^.\s]@\w+\.\w+\s*$/;
  let validPassword = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$/;
+ let soughtFragment = /\+\+.+\+\++/
 
 
-   if(validFulName.test(fulName.value)){
-     fulName.style.backgroundColor = '#C2E0C6'
-   } else{
-     fulName.style.backgroundColor = '#F9D0C4'
-   };
-
+     if(validFulName.test(fulName.value)){
+     fulName.style.backgroundColor = '#C2E0C6';
+     } else{
+     fulName.style.backgroundColor = '#F9D0C4';
+     }
 		 if(validEmail.test(email.value)){
 			 email.style.backgroundColor = '#C2E0C6';
 		 } else{
@@ -28,8 +29,8 @@ document.querySelector('#user-form').addEventListener('submit', function (e) {
 		 } else{
 			 password.style.backgroundColor = '#F9D0C4';
 		 }
-
 });
+
 	 document.querySelectorAll('[data-show]').forEach(function (button){
 					 button.addEventListener('click', function (e) {
 									 document.querySelector('#description').classList.add('d-none');
