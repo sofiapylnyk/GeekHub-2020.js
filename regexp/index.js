@@ -6,12 +6,10 @@ document.querySelector('#user-form').addEventListener('submit', function (e) {
  let email = document.querySelector('[name="email"]');
  let password = document.querySelector('[name="password"]');
  let description = document.querySelector('[name="description"]');
- let fragment = document.querySelector('[name="description"]');
 
  let validFulName = /^[а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]+\s+[а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]+\s+[а-щА-ЩЬьЮюЯяЇїІіЄєҐґ]+$/;
  let validEmail = /^(\w\.?)+[^.\s]@\w+\.\w+\s*$/;
  let validPassword = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$/;
- let soughtFragment = /\+\+.+\+\++/
 
 
      if(validFulName.test(fulName.value)){
