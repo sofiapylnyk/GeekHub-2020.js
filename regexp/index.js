@@ -17,7 +17,7 @@ document.querySelector('#user-form').addEventListener('submit', function (e) {
      } else{
      fulName.style.backgroundColor = '#F9D0C4';
      }
-		 if(validEmail.test(email.value)){
+		 if(validEmail.test(email.value.trim())){
 			 email.style.backgroundColor = '#C2E0C6';
 		 } else{
 			 email.style.backgroundColor = '#F9D0C4';
