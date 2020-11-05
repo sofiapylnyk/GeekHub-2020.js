@@ -8,7 +8,7 @@ document.querySelector('#user-form').addEventListener('submit', function (e) {
  let description = document.querySelector('[name="description"]');
 
  let validFullName = /^[а-щьюяїієґ]+\s+[а-щьюяїієґ]+\s+[а-щьюяїієґ]+$/i;
- let validEmail = /^[a-z0-9-]+[a-z0-9-\.]+[a-z0-9-]@[a-z0-9-][a-z0-9-.]+[a-z0-9-]+$/;
+ let validEmail = /^[a-z0-9-]+[a-z0-9-\.]+[a-z0-9-]@[a-z0-9-][a-z0-9-.]+[a-z0-9-]+$/i;
  let validPassword = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$/;
 
      if (validFullName.test(fullName.value.trim())){
