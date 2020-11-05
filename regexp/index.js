@@ -14,7 +14,7 @@ document.querySelector('#user-form').addEventListener('submit', function (e) {
      if (validFullName.test(fullName.value.trim())){
      	fullName.style.backgroundColor = '#C2E0C6';
      } else{
-     fullName.style.backgroundColor = '#F9D0C4';
+     	fullName.style.backgroundColor = '#F9D0C4';
      }
 
      if (validEmail.test(email.value.trim())){
@@ -32,9 +32,9 @@ document.querySelector('#user-form').addEventListener('submit', function (e) {
 
 	 document.querySelectorAll('[data-show]').forEach(function (button){
 		button.addEventListener('click', function (e) {
-		document.querySelector('#description').classList.add('d-none');
-		document.querySelector('#preview').classList.add('d-none');
+			document.querySelector('#description').classList.add('d-none');
+			document.querySelector('#preview').classList.add('d-none');
 
-		document.querySelector('#' + e.currentTarget.getAttribute('data-show')).classList.remove('d-none');
+			document.querySelector('#' + e.currentTarget.getAttribute('data-show')).classList.remove('d-none');
  });
 });
