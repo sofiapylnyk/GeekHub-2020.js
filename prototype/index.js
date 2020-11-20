@@ -1,4 +1,4 @@
-function Csv() {
+function CsvPrototype() {
 	this.parse = function(string, separator="") {
 		if (separator === "") {
 			let rows = string.split("\n");
@@ -52,3 +52,4 @@ function Csv() {
 		return string;
 	}
 };
+let Csv = new CsvPrototype();
