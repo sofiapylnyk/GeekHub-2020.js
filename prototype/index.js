@@ -1,6 +1,6 @@
 function Csv() {
 };
-  Csv.prototype.parse = function parse(string, separator = "") {
+  Csv.prototype.parse = function parse(string, separator="") {
     if (separator === "") {
 	  let rows = string.split("\n");
 	  const seps = [',', ';', '\t'];
