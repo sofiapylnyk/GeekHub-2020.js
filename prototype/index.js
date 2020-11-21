@@ -38,7 +38,7 @@ function Csv() {
 
 	}
 		return string.split('\n').map(x => x.split(separator));
-  }
+  };
   Csv.prototype.generate = function generate(array, separator=",") {
 	const rows = array.length;
 	const lastCol = array[0].length - 1;
@@ -51,4 +51,4 @@ function Csv() {
 		string += array[i][lastCol] + "\n";
 	}
 	return string;
-  }
+  };
