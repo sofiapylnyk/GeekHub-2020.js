@@ -8,8 +8,8 @@ function Csv() {
       let sepIdx = 0;
       let row = rows[0];
       let position;
-	  let count1 = 0;
-	  let count2 = 0;
+      let count1 = 0;
+      let count2 = 0;
       let found = false;
 
       for (; !found; sepIdx+=1) {
@@ -54,25 +54,3 @@ function Csv() {
 	}
 	return string.trim();
   };
-
-  let arr = [
-	[
-	  "Lorem Ipsum ",
-	  "- це текст-\"р",
-	  "иба\" що використо",
-	  "вується в друкарств"
-	],
-	[
-	  "і та диза",
-	  "йні. Lorem",
-	  " Ipsum є фактично ",
-	  "стандартно"
-	],
-	[
-	  "ю \"рибою\" а",
-	  "ж з XVI",
-	  " сторіччя к",
-	  "оли невідомий "
-	]
-  ];
-  console.log(Csv.prototype.generate(arr))
