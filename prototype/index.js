@@ -48,7 +48,7 @@ function Csv() {
 	  for (let j = 0; j < lastCol; j++) {
 		string += array[i][j] + separator;
 	  }
-		string += array[i][lastCol] + "\n";
+	  string += array[i][lastCol] + "\n";
 	}
-	return string;
+	return string.trim();
   };
