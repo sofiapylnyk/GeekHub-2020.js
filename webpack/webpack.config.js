@@ -20,6 +20,15 @@ module.exports = {
           },
         ]
       },
+	resolve: {
+		extensions: ['.js', '.jsx'],
+	},
+
+	devServer: {
+		contentBase: resolve(__dirname, 'dist'),
+		compress: true,
+		port: 9000
+	},
       optimization: {
         splitChunks: { chunks: "all" }
       },
