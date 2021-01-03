@@ -8,20 +8,16 @@ export default class Slider extends React.Component {
     }
 	state = {
 		x:0,
-		y:0,
 	};
 
 	rootRef = React.createRef();
 
 	startX = 0;
-	startY = 0;
 
 	firstX = 0;
-	firstY = 0;
 
 	onDragStart = (e) => {
 		this.firstX = e.clientX;
-		this.firstY = e.clientY;
 
 		this.rootRect = this.rootRef.current.getBoundingClientRect();
 
@@ -33,7 +29,6 @@ export default class Slider extends React.Component {
 
 	onDrag = (e) => {
 		let x = this.startX + e.clientX - this.firstX;
-		let y = this.startY + e.clientY - this.firstY;
 
 		if (x < 0) {
 			x = 0;
@@ -50,14 +45,13 @@ export default class Slider extends React.Component {
 
 	onDragEnd = (e) => {
 		this.startX = this.state.x
-		this.startY = this.state.y
 
 		document.body.removeEventListener('mousemove', this.onDrag);
 		document.body.removeEventListener('mouseup', this.onDragEnd);
 	};
 
 	render() {
-		const {x, y} = this.state;
+		const {x} = this.state;
 		let val = x + 100
 
 		return (
@@ -68,7 +62,6 @@ export default class Slider extends React.Component {
 			    <Bar>
 					<Handler	
 						x={x}
-						y={y}
 						onMouseDown={this.onDragStart}
 					/>
 				</Bar>
